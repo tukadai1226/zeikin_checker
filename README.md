@@ -1,24 +1,33 @@
-# README
+# アプリケーション名
+税金チェッカー
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーション概要
+ユーザーが知りたい税金を簡易的に把握し、それぞれの税金について知ることができるアプリ
 
-Things you may want to cover:
+# URL
+https://zeikin-checker.onrender.com/
 
-* Ruby version
+# 利用方法
+- 知りたい項目を選択
+- 入力フォームに金額・その他必要項目を選択
+- フォームを送信すると金額が表示
+- 知りたい税金の項目を選択すると説明が表示される
 
-* System dependencies
+# アプリケーションを作成した背景
+税金や補助金を簡易的に知りたいというニーズに対し、現状では異なるWebサイトに情報が分散している背景や個人が把握するにはそれらの情報を理解しなければならないため非常に複雑化しているためこれらの課題を解決するためにアプリを企画した
 
-* Configuration
+# 洗い出した要件
 
-* Database creation
+# 画面遷移図
 
-* Database initialization
+# 開発環境
 
-* How to run the test suite
+# ローカルでの動作方法
 
-* Services (job queues, cache servers, search engines, etc.)
+# 工夫したポイント
 
-* Deployment instructions
+# 改善点
 
-* ...
+# 実装予定の機能
+
+# 制作時間
