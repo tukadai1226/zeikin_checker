@@ -1,0 +1,2 @@
+class ZeikinsController < ApplicationController
+end
