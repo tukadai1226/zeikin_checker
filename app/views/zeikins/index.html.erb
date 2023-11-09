@@ -1,1 +1,96 @@
-<%= 'Hello.world' %>
+<script>
+function calculateSalary() {
+  // フォームから入力値を取得
+  var basicSalary = parseInt(document.getElementById("basicSalary").value);
+  // 他の入力値も同様に取得
+
+  // 月収の計算ロジック（ここでは簡単な例を示します）
+  var totalSalary = basicSalary;
+
+  // 各項目の計算（簡単な例）
+  var pensionAmount = Math.floor(basicSalary * 0.1); // 厚生年金
+  var healthInsuranceAmount = Math.floor(basicSalary * 0.05); // 健康保険
+  var employmentInsuranceAmount = Math.floor(basicSalary * 0.02); // 雇用保険
+  var nationalPensionAmount = 10000; // 国民年金
+  var nationalHealthInsuranceAmount = 5000; // 国民健康保険
+  var incomeTaxAmount = Math.floor(basicSalary * 0.1); // 所得税
+  var residentTaxAmount = Math.floor(basicSalary * 0.05); // 住民税
+
+  // 手取り収入の計算
+  var netIncome = totalSalary - (pensionAmount + healthInsuranceAmount + employmentInsuranceAmount + nationalPensionAmount + nationalHealthInsuranceAmount + incomeTaxAmount + residentTaxAmount);
+
+  // 計算結果を表に出力
+  document.getElementById("basicSalaryAmount").textContent = basicSalary + " 円";
+  document.getElementById("pensionAmount").textContent = pensionAmount + " 円";
+  document.getElementById("healthInsuranceAmount").textContent = healthInsuranceAmount + " 円";
+  document.getElementById("employmentInsuranceAmount").textContent = employmentInsuranceAmount + " 円";
+  document.getElementById("nationalPensionAmount").textContent = nationalPensionAmount + " 円";
+  document.getElementById("nationalHealthInsuranceAmount").textContent = nationalHealthInsuranceAmount + " 円";
+  document.getElementById("incomeTaxAmount").textContent = incomeTaxAmount + " 円";
+  document.getElementById("residentTaxAmount").textContent = residentTaxAmount + " 円";
+  document.getElementById("netIncome").textContent = netIncome + " 円";
+}
+</script>
+
+<%= render partial: "header" %>
+<%# 赤の背景 %>
+<div class="bg">
+  <div class="main">
+    <div class="m">
+  <%# 円グラフ %>
+    <div class= "graph">
+      <canvas id="myDonutChart" width="300" height="300"></canvas>
+    </div>
+
+    <%# 入力フォーム %>
+    <div class="format">
+      <%# 月収 %>
+      <div class ="month-many">
+        <form id="salarySimulationForm">
+          <label for="basicSalary">基本月給 (円):</label>
+            <input type="text" id="basicSalary" name="basicSalary" required>
+      </div>
+      <%# 就業地 %>
+        <div class ="countoly">
+          <label for="workLocation">就業地:</label>
+            <select id="workLocation" name="workLocation">
+              <option value="tokyo">東京</option>
+              <option value="osaka">大阪</option>
+          <!-- 他の就業地のオプションを追加 -->
+            </select>
+        </div>
+      <%# 年齢 %>
+      <div class = "age">
+        <label for="age">年齢 (歳):</label>
+        <input type="number" id="age" name="age" required>
+      </div>
+      <%# 扶養人数 %>
+      <div class = "num">
+        <label for="dependents">扶養人数:</label>
+        <input type="number" id="dependents" name="dependents" required>
+      </div>
+      <%# 残業代 %>
+      <div class="zanngyou">
+        <label for="overtimePay">残業代 (円):</label>
+        <input type="text" id="overtimePay" name="overtimePay" required>
+      </div>
+      <%# 交通費 %>
+      <div class = "koutuu">
+        <label for="transportationCost">交通費 (円):</label>
+        <input type="text" id="transportationCost" name="transportationCost" required>
+      </div>
+      <%# 計算 %>
+      <div class= "keisan">
+        <button type="button" id="send-button" onclick="calculateSalary()">計算</button>
+      </div>
+        </form>
+    </div>
+  </div>
+    <%# 上までがフォーマット %>
+
+    <%# 結果 %>
+    <h1 class="shu">税金・保険料シミュレーション</h1>
+  <%= render partial: "result" %>
+  </div>
+</div>
+

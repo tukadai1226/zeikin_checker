@@ -1,0 +1,67 @@
+table {
+  width: 100%;
+  font-family: Arial, sans-serif;
+}
+
+th, td {
+  border: 1px solid #ddd;
+  padding: 5px;
+  text-align: center;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+
+/* 偶数行と奇数行の背景色 */
+tr:nth-child(even) {
+  background-color: #f5f5f5;
+}
+
+tr:nth-child(odd) {
+  background-color: #7c1c1c;
+}
+
+/* 金額セルの右寄せ */
+td[id$="Amount"] {
+  text-align: right;
+}
+
+/* 手取り収入セルの特別なスタイル */
+#netIncome {
+  font-weight: bold;
+  background-color: #dff0d8;
+}
+
+/* ヘッダーセルのスタイル */
+th {
+  font-weight: bold;
+  background-color: #337ab7;
+  color: white;
+}
+
+/* ラベルと入力フォームのスタイル */
+.format label {
+  display: block;
+  font-size: 14px;
+  color: #95a5a6;
+  margin-bottom: 3px; /* ラベル下のスペースをさらに狭く調整 */
+}
+
+.format input[type="text"],
+.format input[type="number"],
+.format select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #34495e;
+  border-radius: 3px;
+  background-color: #34495e;
+  color: #ecf0f1;
+  margin-bottom: 5px; /* 入力フォーム下のスペースを狭く調整 */
+}
+
+.format input[type="text"]:focus,
+.format input[type="number"]:focus,
+.format select:focus {
+  border-color: #3498db;
+}

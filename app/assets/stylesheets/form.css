@@ -1,0 +1,45 @@
+/* フォームのスタイル */
+.format {
+  background-color: #2c3e50;
+  color: #ecf0f1;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* フォーム内要素のスタイル */
+.format label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.format input[type="text"],
+.format input[type="number"],
+.format select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #34495e;
+  border-radius: 3px;
+  background-color: #34495e;
+  color: #ecf0f1;
+}
+
+.format input[type="text"]:focus,
+.format input[type="number"]:focus,
+.format select:focus {
+  border-color: #3498db;
+}
+
+/* ボタンのスタイル */
+.keisan button {
+  background-color: #3498db;
+  color: #ecf0f1;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.keisan button:hover {
+  background-color: #2980b9;
+}
