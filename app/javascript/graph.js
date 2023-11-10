@@ -1,7 +1,7 @@
 window.onload = function () {
     // 初期の計算結果（仮の値）
     const initialResults = {
-        手取り収入: 500, 
+        手取り収入: 300, 
         厚生年金: 200, 
         健康保険: 150, 
         雇用保険: 50, 
@@ -10,15 +10,14 @@ window.onload = function () {
         所得税: 30,
         住民税: 30
     };
-    
     // チャート用のデータを作成
     const chartData = {
       labels: Object.keys(initialResults), // 計算結果の項目をラベルとして使用
         datasets: [{
         data: Object.values(initialResults), // 計算結果の金額をデータとして使用
         backgroundColor: [
-          'silver', 'blue', 'green', 'red' // 各項目の色を設定
-          // 他の項目にも適切な色を追加
+          '#F08080', '#FFA07A', '#FFFF66', '#90EE90', 
+          '#98FB98', '#6495ED','#AFEEEE',  '#E6E6FA'
         ]
         }]
     };

@@ -62,3 +62,38 @@ EDIT ON
   transform: translate(0, 0);
 }
 
+.shu {
+  margin-top: 50px;
+  font-size: 50px;
+}
+
+.format{
+  margin-right: 200px;
+}
+
+
+/* ラベルと入力フォームのスタイル */
+.format label {
+  height: 5px;
+  display: block;
+  font-size: 14px;
+  color: #95a5a6;
+  margin-top: 3px; /* ラベル下のスペースをさらに狭く調整 */
+}
+
+.format input[type="text"],
+.format input[type="number"],
+.format select {
+  width: 200px;
+  padding: 5px;
+  border: 1px solid #34495e;
+  background-color: #34495e;
+  color: #ecf0f1;
+  margin-bottom: 5px; /* 入力フォーム下のスペースを狭く調整 */
+}
+
+.format input[type="text"]:focus,
+.format input[type="number"]:focus,
+.format select:focus {
+  border-color: #3498db;
+}

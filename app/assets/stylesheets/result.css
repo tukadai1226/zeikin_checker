@@ -1,25 +1,33 @@
+.result {
+  display: flex;
+  justify-content: center;
+}
+
 table {
-  width: 100%;
+  width: 70%; /* 例: 全体の幅の70%に設定 */
   font-family: Arial, sans-serif;
+  border-collapse: collapse; /* セルの境界線を重ねる */
+  margin-top: 10px; /* 余白を追加 */
 }
 
 th, td {
-  border: 1px solid #ddd;
-  padding: 5px;
+  border: 1px solid #34495e;
+  padding: 8px; /* セルの余白を調整 */
   text-align: center;
 }
 
 th {
-  background-color: #f2f2f2;
+  background-color: green;
+  color: white;
 }
 
 /* 偶数行と奇数行の背景色 */
 tr:nth-child(even) {
-  background-color: #f5f5f5;
+  background-color: #253141; /* 紺色に変更 */
 }
 
 tr:nth-child(odd) {
-  background-color: #7c1c1c;
+  background-color: #34495e; /* 青色に変更 */
 }
 
 /* 金額セルの右寄せ */
@@ -30,38 +38,15 @@ td[id$="Amount"] {
 /* 手取り収入セルの特別なスタイル */
 #netIncome {
   font-weight: bold;
-  background-color: #dff0d8;
+  background-color: royalblue;
 }
 
 /* ヘッダーセルのスタイル */
 th {
   font-weight: bold;
   background-color: #337ab7;
-  color: white;
 }
 
-/* ラベルと入力フォームのスタイル */
-.format label {
-  display: block;
-  font-size: 14px;
-  color: #95a5a6;
-  margin-bottom: 3px; /* ラベル下のスペースをさらに狭く調整 */
-}
-
-.format input[type="text"],
-.format input[type="number"],
-.format select {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #34495e;
-  border-radius: 3px;
-  background-color: #34495e;
-  color: #ecf0f1;
-  margin-bottom: 5px; /* 入力フォーム下のスペースを狭く調整 */
-}
-
-.format input[type="text"]:focus,
-.format input[type="number"]:focus,
-.format select:focus {
-  border-color: #3498db;
+.pensionAmount {
+  color: #34495e;
 }
