@@ -30,6 +30,10 @@ function calculateSalary() {
   document.getElementById("residentTaxAmount").textContent = residentTaxAmount + " 円";
   document.getElementById("netIncome").textContent = netIncome + " 円";
 }
+
+function showResults() {
+  // ここに showResults のコードを配置
+}
 </script>
 
 <%= render partial: "header" %>
@@ -81,7 +85,7 @@ function calculateSalary() {
       </div>
       <%# 計算 %>
       <div class= "keisan">
-        <button type="button" id="send-button" onclick="calculateSalary()">計算</button>
+        <button type="button" id="send-button" onclick="calculateSalary(); showResults();">計算</button>
       </div>
         </form>
     </div>
@@ -92,5 +96,6 @@ function calculateSalary() {
     <h1 class="shu">税金・保険料シミュレーション</h1>
   <%= render partial: "result" %>
   </div>
+  <div></div>
 </div>
 
